@@ -1,19 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:background="@color/blue"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="28dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_gravity="start"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text"/>
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/search_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="@string/search"
+            android:textSize="@dimen/medium_text"
+            android:textAllCaps="false"
+            app:cornerRadius="@dimen/corner_radius"
+            app:icon="@drawable/search_icon"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:iconTint="@color/yt_black"
+            android:textColor="@color/yt_black" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/media_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="@string/media"
+            android:textSize="@dimen/medium_text"
+            android:textAllCaps="false"
+            app:cornerRadius="@dimen/corner_radius"
+            app:icon="@drawable/media_icon"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:iconTint="@color/yt_black"
+            android:textColor="@color/yt_black"/>
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/settings_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="@string/settings"
+            android:textSize="@dimen/medium_text"
+            android:textAllCaps="false"
+            app:cornerRadius="@dimen/corner_radius"
+            app:icon="@drawable/settings_icon"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:iconTint="@color/yt_black"
+            android:textColor="@color/yt_black"/>
+    </LinearLayout>
+</LinearLayout>
