@@ -52,7 +52,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingVertical="18dp">
+            android:paddingVertical="@dimen/frame_vertical_padding">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -63,8 +63,8 @@
                 android:textColor="@color/black"/>
             <Button
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/small_btn_size"
+                android:layout_height="@dimen/small_btn_size"
                 app:icon="@drawable/share_icon"
                 app:iconTint="@color/text_gray"
                 android:layout_gravity="end"/>
@@ -72,7 +72,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingVertical="16dp">
+            android:paddingVertical="@dimen/frame_vertical_padding">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -83,8 +83,8 @@
                 android:textColor="@color/black"/>
             <Button
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/small_btn_size"
+                android:layout_height="@dimen/small_btn_size"
                 app:icon="@drawable/support_icon"
                 app:iconTint="@color/text_gray"
                 android:layout_gravity="end"/>

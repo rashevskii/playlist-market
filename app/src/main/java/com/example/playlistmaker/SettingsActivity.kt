@@ -22,7 +22,7 @@ class SettingsActivity : AppCompatActivity() {
         val backBtn = findViewById<Button>(R.id.back_from_settings)
         val mainIntent = Intent(this, MainActivity::class.java)
 
-        backBtn.setOnClickListener { startActivity(mainIntent) }
+        backBtn.setOnClickListener { finish() }
 
     }
 }
