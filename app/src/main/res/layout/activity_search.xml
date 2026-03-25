@@ -7,13 +7,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingHorizontal="16dp">
-    <TextView
-        style="@style/SettingsText"
-        android:text="@string/search"
-        android:textSize="@dimen/medium_text"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp"
-        android:layout_gravity="start"/>
+    <com.google.android.material.appbar.MaterialToolbar
+        app:title="@string/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="48dp">

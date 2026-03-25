@@ -7,37 +7,29 @@
     android:orientation="vertical"
     android:paddingHorizontal="16dp"
     android:paddingVertical="28dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:layout_gravity="start"
-            android:textColor="@color/white"
-            android:fontFamily="@font/ys_display_medium"
-            android:textSize="@dimen/medium_text"/>
-    <LinearLayout
-        style="?android:attr/buttonBarStyle"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="24dp"
-        android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_gravity="start"
+        android:textColor="@color/white"
+        android:fontFamily="@font/ys_display_medium"
+        android:textSize="@dimen/medium_text"/>
+    <Button
+        style="@style/MainButtons"
+        android:id="@+id/search_btn"
+        android:text="@string/search"
+        app:icon="@drawable/search_icon" />
 
-        <Button
-            style="@style/MainButtons"
-            android:id="@+id/search_btn"
-            android:text="@string/search"
-            app:icon="@drawable/search_icon" />
+    <Button
+        style="@style/MainButtons"
+        android:id="@+id/media_btn"
+        android:text="@string/media"
+        app:icon="@drawable/media_icon"/>
 
-        <Button
-            style="@style/MainButtons"
-            android:id="@+id/media_btn"
-            android:text="@string/media"
-            app:icon="@drawable/media_icon"/>
-
-        <Button
-            style="@style/MainButtons"
-            android:id="@+id/settings_btn"
-            android:text="@string/settings"
-            app:icon="@drawable/settings_icon"/>
-    </LinearLayout>
+    <Button
+        style="@style/MainButtons"
+        android:id="@+id/settings_btn"
+        android:text="@string/settings"
+        app:icon="@drawable/settings_icon"/>
 </LinearLayout>
