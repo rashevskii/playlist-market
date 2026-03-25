@@ -1,6 +1,7 @@
 package com.example.playlistmaker
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -24,5 +25,25 @@ class SettingsActivity : AppCompatActivity() {
 
         backBtn.setOnClickListener { finish() }
 
+        val shareBtn = findViewById<Button>(R.id.share_app_btn)
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.putExtra(Intent.EXTRA_TEXT, "http://ya.ru")
+        shareIntent.setType("text/plain")
+        shareBtn.setOnClickListener { startActivity(shareIntent) }
+
+        val writeSupportBtn = findViewById<Button>(R.id.write_to_support_btn)
+        val subject = "Сообщение разработчикам и разработчицам приложения Playlist Maker"
+        val message = "Спасибо разработчикам и разработчицам за крутое приложение!"
+        val mailIntent = Intent(Intent.ACTION_SENDTO)
+        mailIntent.data = Uri.parse("mailto:")
+        mailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("rashevskii@yandex.ru"))
+        mailIntent.putExtra(Intent.EXTRA_SUBJECT, subject)
+        mailIntent.putExtra(Intent.EXTRA_TEXT, message)
+        writeSupportBtn.setOnClickListener { startActivity(mailIntent) }
+
+        val userAgreementBtn = findViewById<Button>(R.id.user_agreement_btn)
+        val agreementIntent = Intent(Intent.ACTION_VIEW)
+        agreementIntent.data = Uri.parse("https://yandex.ru/legal/practicum_offer/ru/")
+        userAgreementBtn.setOnClickListener { startActivity(agreementIntent) }
     }
 }

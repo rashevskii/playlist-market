@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/BackgroundScreen"
     android:id="@+id/settings"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
     android:paddingHorizontal="16dp">
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,100 +14,56 @@
         android:layout_marginBottom="24dp"
         android:paddingVertical="10dp">
         <Button
-            style="?android:attr/buttonBarButtonStyle"
+            style="@style/BackButton"
             android:id="@+id/back_from_settings"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:backgroundTint="@color/white"
-            app:icon="@drawable/arrow_back_icon"
-            app:iconTint="@color/yt_black" />
+            app:icon="@drawable/arrow_back_icon" />
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/SettingsText"
             android:text="@string/settings"
             android:textSize="@dimen/medium_text"
-            android:textColor="@color/black"/>
+            android:paddingTop="0dp"
+            android:paddingLeft="20dp"
+            android:layout_gravity="center"/>
     </LinearLayout>
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
+        style="@style/SettingsItemWrapper"
         android:orientation="vertical">
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="16dp">
+        <FrameLayout style="@style/SettingsItemWrapper">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/SettingsText"
                 android:text="@string/dark_mode"
-                android:textSize="@dimen/small_text"
-                android:layout_gravity="start"
-                android:textColor="@color/black"/>
+                android:paddingTop="0dp"/>
             <Switch
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"/>
         </FrameLayout>
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="@dimen/frame_vertical_padding">
+        <FrameLayout style="@style/SettingsItemWrapper">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/share_app"
-                android:textSize="@dimen/small_text"
-                android:layout_gravity="start"
-                android:paddingTop="14dp"
-                android:textColor="@color/black"/>
+                style="@style/SettingsText"
+                android:text="@string/share_app"/>
             <Button
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="@dimen/small_btn_size"
-                android:layout_height="@dimen/small_btn_size"
-                app:icon="@drawable/share_icon"
-                app:iconTint="@color/text_gray"
-                android:layout_gravity="end"/>
+                android:id="@+id/share_app_btn"
+                style="@style/SettingsButton"
+                app:icon="@drawable/share_icon"/>
         </FrameLayout>
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="@dimen/frame_vertical_padding">
+        <FrameLayout style="@style/SettingsItemWrapper">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/write_to_support"
-                android:textSize="@dimen/small_text"
-                android:layout_gravity="start"
-                android:paddingTop="14dp"
-                android:textColor="@color/black"/>
+                style="@style/SettingsText"
+                android:text="@string/write_to_support"/>
             <Button
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="@dimen/small_btn_size"
-                android:layout_height="@dimen/small_btn_size"
-                app:icon="@drawable/support_icon"
-                app:iconTint="@color/text_gray"
-                android:layout_gravity="end"/>
+                android:id="@+id/write_to_support_btn"
+                style="@style/SettingsButton"
+                app:icon="@drawable/support_icon"/>
         </FrameLayout>
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="16dp">
+        <FrameLayout style="@style/SettingsItemWrapper">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/usage_license"
-                android:textSize="@dimen/small_text"
-                android:layout_gravity="start"
-                android:paddingTop="14dp"
-                android:textColor="@color/black"/>
+                style="@style/SettingsText"
+                android:text="@string/usage_license"/>
             <Button
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                app:icon="@drawable/arrow_forward_icon"
-                app:iconTint="@color/text_gray"
-                android:layout_gravity="end"/>
+                android:id="@+id/user_agreement_btn"
+                style="@style/SettingsButton"
+                app:icon="@drawable/arrow_forward_icon"/>
         </FrameLayout>
     </LinearLayout>
 </LinearLayout>
