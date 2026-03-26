@@ -7,4 +7,5 @@
     <dimen name="frame_vertical_padding">16dp</dimen>
     <dimen name="padding_top_14">14dp</dimen>
     <dimen name="back_button_size">48dp</dimen>
+
 </resources>
