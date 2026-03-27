@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MainScreen">
+        <item name="android:background">@color/yt_black</item>
+    </style>
+    <style name="BackgroundScreen">
+        <item name="android:background">@color/yt_black</item>
+    </style>
+    <style name="BackButton">
+        <item name="android:backgroundTint">@color/yt_black</item>
+        <item name="iconTint">@color/white</item>
+        <item name="android:layout_width">@dimen/back_button_size</item>
+        <item name="android:layout_height">@dimen/back_button_size</item>
+    </style>
+    <style name="MainButtons" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textSize">@dimen/medium_text</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">8dp</item>
+        <item name="android:textColor">@color/yt_black</item>
+        <item name="iconTint">@color/yt_black</item>
+        <item name="android:fontFamily">@font/ys_display_medium</item>
+    </style>
+    <style name="SettingsButton" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">@dimen/small_btn_size</item>
+        <item name="android:layout_height">@dimen/small_btn_size</item>
+        <item name="iconTint">@color/text_gray</item>
+        <item name="android:layout_gravity">end</item>
+    </style>
+    <style name="SettingsText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/small_text</item>
+        <item name="android:textColor">@color/settings_text</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:paddingTop">@dimen/padding_top_14</item>
+        <item name="android:fontFamily">@font/ys_display_medium</item>
+    </style>
+</resources>
