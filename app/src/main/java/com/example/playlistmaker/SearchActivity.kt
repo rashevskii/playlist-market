@@ -1,9 +1,11 @@
 package com.example.playlistmaker
 
+import android.content.Context
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
@@ -37,7 +39,12 @@ class SearchActivity : AppCompatActivity() {
         val inputEditText = findViewById<EditText>(R.id.searchInput)
         val clearButton = findViewById<ImageView>(R.id.clearButton)
 
-        clearButton.setOnClickListener { inputEditText.setText("") }
+        clearButton.setOnClickListener {
+            inputEditText.text.clear()
+            inputEditText.clearFocus()
+            val imm = getSystemService(InputMethodManager::class.java)
+            imm?.hideSoftInputFromWindow(inputEditText.windowToken, 0)
+        }
 
         val searchTextWatcher = object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
