@@ -11,4 +11,6 @@
     <color name="share_icon">#FFFFFF</color>
     <color name="support_icon">#FFFFFF</color>
     <color name="go_into_icon">#FFFFFF</color>
+    <color name="track_name">#FFFFFF</color>
+    <color name="track_subtitle">#FFFFFF</color>
 </resources>
