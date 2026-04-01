@@ -16,8 +16,8 @@ class TracksViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         Glide
             .with(itemView)
             .load(model.artworkUrl100)
-            .placeholder(R.drawable.landscape_placeholder)
-            .error(R.drawable.landscape_placeholder)
+            .placeholder(R.drawable.placeholder)
+            .error(R.drawable.placeholder)
             .centerCrop()
             .transform(RoundedCorners(2))
             .into(albumImage)
