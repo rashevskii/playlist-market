@@ -17,4 +17,6 @@
     <color name="share_icon">#AEAFB4</color>
     <color name="support_icon">#AEAFB4</color>
     <color name="go_into_icon">#AEAFB4</color>
+    <color name="track_name">#1A1B22</color>
+    <color name="track_subtitle">#AEAFB4</color>
 </resources>
